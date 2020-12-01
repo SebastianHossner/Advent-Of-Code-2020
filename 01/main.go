@@ -22,16 +22,14 @@ func main() {
 		text = append(text, scanner.Text())
 	}
 	file.Close()
-
 	sl := []int{}
 	for _, x := range text {
 		m, err := strconv.Atoi(x)
 		if err != nil {
-			fmt.Println("å hellevette")
+			fmt.Println("failed to convert")
 		}
 		sl = append(sl, m)
 	}
-
 	fmt.Println(sl)
 	for _, x := range sl {
 		for _, y := range sl {
